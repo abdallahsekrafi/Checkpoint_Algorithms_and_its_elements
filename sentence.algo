@@ -1,0 +1,32 @@
+ALGORITHM SENTENCE
+VAR
+   nbrv,nbrw,nbrc: INTEGER;
+   sentc : STRING[];
+   nbrv:=0; //the number of vowels
+   nbrw:=1; // the number of words
+   nbrc:0;  // the number of characters
+BEGIN
+   write("type your sentence 'lower case'")
+   read(sentc);
+
+   REPEAT
+
+      IF (sentc[nbrc]=" ") THEN
+         nbrw:=nbrw+1;
+      END_IF
+
+      IF (sentc[nbrc] in ["a","e","i","o","u","y"]) THEN
+         nbrv:=nbrv+1;
+      END_IF
+
+      nbrc:=nbrc+1;
+
+   UNTIL (sentc[nbrc]=".")
+
+   
+   write( "le nombre de caractere est ",nbc+1 ) // +1 because we start from 0 
+
+   write (" le nombre de mot est ",nbw)
+
+   write (" le nombre de voyelle est ",nbv)
+END
